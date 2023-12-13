@@ -16,16 +16,15 @@ if uploaded_file_extra is not None:
     dataframe_extra = pd.read_csv(uploaded_file_extra)
     st.write("Ya se cargo :D")
 
+    @st.cache
+    def convert_df(df):
+        return df.to_csv().encode('utf-8')
 
-@st.cache
-def convert_df(df):
-    return df.to_csv().encode('utf-8')
+    csv = convert_df(dataframe_extra)
 
-csv = convert_df(dataframe_extra)
-
-st.download_button(
-    label="Descarga la data con tus clusters :D",
-    data=csv,
-    file_name='data_clusters_extraya.csv',
-    mime='text/csv',
-)
+    st.download_button(
+        label="Descarga la data con tus clusters :D",
+        data=csv,
+        file_name='data_clusters_extraya.csv',
+        mime='text/csv',
+    )
