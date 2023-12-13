@@ -1,20 +1,16 @@
 import streamlit as st
 import pandas as pd
-from io import StringIO
 
 st.set_page_config(page_title="ExtraYA Demo", page_icon="💰")
 st.markdown("# ExtraYA")
 
 #st.image("img/Logo_color.png")
 
-st.title("Predictores de grupos")
-
 st.header("ExtraYA")
 uploaded_file_extra = st.file_uploader("Por favor, cargue un archivo CSV")
 
 if uploaded_file_extra is not None:
     dataframe_extra = pd.read_csv(uploaded_file_extra)
-    st.write("Ya se cargo :D")
 
     @st.cache
     def convert_df(df):
