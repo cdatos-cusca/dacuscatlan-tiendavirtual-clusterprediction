@@ -3,7 +3,7 @@ import pandas as pd
 
 st.set_page_config(page_title="ExtraYA", page_icon="💰")
 st.sidebar.header("ExtraYA")
-#st.markdown("# ExtraYA")
+st.markdown("# ExtraYA")
 #st.image("img/Logo_color.png")
 
 uploaded_file_extra = st.file_uploader("Por favor, cargue un archivo CSV")
@@ -23,32 +23,3 @@ if uploaded_file_extra is not None:
         file_name='data_clusters_extraya.csv',
         mime='text/csv',
     )
-
-    footer="""<style>
-a:link , a:visited{
-color: blue;
-background-color: transparent;
-text-decoration: underline;
-}
-
-a:hover,  a:active {
-color: red;
-background-color: transparent;
-text-decoration: underline;
-}
-
-.footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: white;
-color: black;
-text-align: center;
-}
-</style>
-<div class="footer">
-<p>Hecho con  ❤ por Data & Analytics</a></p>
-</div>
-"""
-st.markdown(footer, unsafe_allow_html=True)
