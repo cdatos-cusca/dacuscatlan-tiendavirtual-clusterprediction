@@ -6,7 +6,6 @@ st.markdown("# ExtraYA")
 
 #st.image("img/Logo_color.png")
 
-st.header("ExtraYA")
 uploaded_file_extra = st.file_uploader("Por favor, cargue un archivo CSV")
 
 if uploaded_file_extra is not None:
