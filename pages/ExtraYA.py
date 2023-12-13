@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="ExtraYA Demo", page_icon="💰")
-st.markdown("# ExtraYA")
-
+st.set_page_config(page_title="ExtraYA", page_icon="💰")
+st.sidebar.header("ExtraYA")
+#st.markdown("# ExtraYA")
 #st.image("img/Logo_color.png")
 
 uploaded_file_extra = st.file_uploader("Por favor, cargue un archivo CSV")
